@@ -1,6 +1,9 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, CheckCircle2, Target, Calendar, Users, MessageCircle, BookOpen, TrendingUp, Clock, User, Award, GraduationCap, Star } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Target, Calendar, Users, MessageCircle, BookOpen, TrendingUp, Clock, User, Award, GraduationCap, Star, ChevronDown } from 'lucide-react';
 import { SectionHeader } from '@/components/lefy/section-header';
 import { CTASection } from '@/components/lefy/cta-section';
 import { JukenFlowDiagnosis } from '@/components/lefy/juke-flow-diagnosis';
@@ -10,16 +13,118 @@ const cramSchools = [
   'SAPIX', 'Gnoble', '日能研', '四谷大塚', '希学園', '浜学園', '早稲アカ'
 ];
 
-// 2025年合格実績
-const results2025 = [
-  '愛光', '青山学院横浜英和', '浅野', '市川', '開成', '開智',
-  '神奈川大学附属', '鎌倉学園', '関東学院', '桐蔭学園', '桐光学園',
-  '香蘭', '埼玉栄', '栄東（東大クラス特待・難関大）',
-  '佐久長聖（特待C含む）', 'サレジオ学院', '静岡聖光', '淑徳与野',
-  '逗子開成', '聖光学院', '東京都市大学等々力（特選）',
-  '藤嶺学園藤沢', '日本大学', '日本大学藤沢',
-  '三田国際（ISC、MSTC）', '武相', '八雲学園',
-  '山手学院（特待含む）', '横浜創英', '早稲田佐賀'
+// 年度別合格実績データ
+const resultsByYear: Record<2025 | 2024 | 2023, string[]> = {
+  2025: [
+    '愛光', '青山学院横浜英和', '浅野', '市川', '開成', '開智',
+    '神奈川大学附属', '鎌倉学園', '関東学院', '桐蔭学園', '桐光学園',
+    '香蘭', '埼玉栄', '栄東（東大クラス特待・難関大）',
+    '佐久長聖（特待C含む）', 'サレジオ学院', '静岡聖光', '淑徳与野',
+    '逗子開成', '聖光学院', '東京都市大学等々力（特選）',
+    '藤嶺学園藤沢', '日本大学', '日本大学藤沢',
+    '三田国際（ISC、MSTC）', '武相', '八雲学園',
+    '山手学院（特待含む）', '横浜創英', '早稲田佐賀'
+  ],
+  2024: [
+    '栄光学園', '神奈川大学附属', '佐久長聖', '佐久長聖（特待B）',
+    'サレジオ学院', '逗子開成', '中央大学附属横浜', '桐蔭学園（特待）',
+    '森村学園（特待）', '山手学院'
+  ],
+  2023: [
+    'フェリス女学院', '佐久長聖（特待A）', '田園調布学園（午後算数）',
+    '桐光学園', '静岡聖光', '関東学院', '宝仙学園（特待）'
+  ]
+};
+
+// 合格者の声データ
+interface Testimonial {
+  id: string;
+  studentName: string;
+  school: string;
+  grade: string;
+  studentVoice: string;
+  parentVoice: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    id: 'tk',
+    studentName: 'T.K君',
+    school: '栄光学園',
+    grade: '精華小学校',
+    studentVoice: `僕には、3ヶ月のブランクがありました。その時、知り合いの薦めでレフィーに入りました。
+
+レフィーの先生は、僕がミスをしても温かく見守ってくれ、僕が欠点に気づきやすいようにうまくまとめてくれました。
+
+僕はそれをノート化して、入試前の最後の1ヶ月、過去問をやる時に見ながら役立てました。
+
+先生方は癖のある栄光の算数にもちゃんと対応・サポートしてくれたため、合格することができました。レフィーの先生方に感謝しています。`,
+    parentVoice: `反抗期に入って子供が受験に意味をみいだせず、いよいよ勉強時間が大切になってくる5年の冬にとうとう歩みを止めてしまいました。
+
+大手塾の勉強をすべてやらなくなり、3ヶ月が淡々と過ぎていきました。
+
+結果、前から苦手意識のあった算数の成績が低下し始めました。さすがにこのままではまずいと思い知り合いに相談。LEFYの門をたたきました。
+
+先生はよくヒアリングしてくださり、息子の様子を見ながら慎重に勉強をスタートしてくださいました。息子は歳の近い先生とすぐに息が合ったようで、次第に算数が好きになっていきました。
+
+息子は大変面倒くさがり屋でかつ、軽微なミスの多い子でしたので、その癖直しも大変でした。先生の豊富なアイデアで少しずつ自分の直さなければならないところを意識していった気がします。
+
+また担当してくださった先生方のおかげで、算数の楽しさのみならず数学への興味まで導いてくださいました。
+
+『栄光の算数って面白いね』というのが初めて過去問に取り組んだ息子の感想です。
+
+これによって自然と中学校で学ぶことについて考え、受験を前向きに考えられるようになりました。
+
+これからも道のりは長いですが、
+
+先生が繋げてくださった道を栄光学園でさらに広げていきたいと思います。
+
+本当にお世話になりました。
+
+ありがとうございました。`
+  },
+  {
+    id: 'kk',
+    studentName: 'K.K君',
+    school: '逗子開成',
+    grade: '私立小学校',
+    studentVoice: `成績が思うように伸びずにいた6年の夏期講習前から、LEFYへ通い始めました。
+
+LEFYの先生方は自分の解き方を尊重しつつも、より良い解き方を教えてくれました。
+
+苦手なところも最後は出来るようになり、自信にもつながりました。
+
+授業以外の自習の時にも、わからないところの質問が出来たことはとても良かったです。
+
+入塾してから受験本番が終わるまでずっと励ましてくれたこと、僕にとって心の支えとなりました。
+
+LEFYの先生方に本当に感謝しています。ありがとうございました。`,
+    parentVoice: `「個別塾は嫌い！自分の欠点ばかり指摘するから等」頑なに個別塾へ入塾することを拒んでいた子どもの考えを払拭してくれたのがLEFYでした。
+
+大手塾に通っていたものの成績がなかなか思うように伸びず、親の言うことは基本聞かない我が子。
+
+果たしてどこまでやれるのか、そもそも早々にギブアップしてしまうかも等、不安な気持ちで入塾いたしましたが、
+
+入塾の際の丁寧なカウンセリングから始まり、定期的な面談以外にもメール等子どもの様子の共有やこちらからの相談にものっていただき、安心して通塾することが出来ました。
+
+細やかなサポートの中に、我が家にとって自習が出来たことも大きなポイントにもなりました。
+
+自宅ではどうしても気が散ってしまい、図書館や近所のカフェなど少しでも集中出来る環境をと試行錯誤しておりましたが、
+
+LEFYでの自習は、自分で時間を決めて取り組み、尚且つ合間に先生に質問が出来たこと、有難い環境でした。
+
+中学受験を経験された先生やこの業界に精通された先生方からの指導は、子どもの気持ちに寄り添い、共感しつつも苦手分野を克服することが出来、受験本番中までメンタル面含めてサポートいただきました。
+
+子どもは経験ある先生方ご自身の当時の学校生活を聞くこともあり、入学後の中学校から大学生活までイメージし、さらに頑張ろうと思える目標にもなりました。
+
+小学生が3年以上長い期間取り組む中学受験。親もその経験がない中、LEFYの先生方のサポートがなければ、
+
+この受験を乗り越えることが出来なかったと、子どもの様子を見て痛感しております。
+
+「個別塾は嫌い！」から今では今後も通塾したい塾になりました。
+
+中学受験は終わりましたが、学ぶことはこれで終わりではないので今後もご指導いただきたいと考えております。 本当にありがとうございました。`
+  }
 ];
 
 // 悩みチェックリスト
@@ -107,7 +212,75 @@ const faqs = [
   },
 ];
 
+// TestimonialCard コンポーネント
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<'student' | 'parent'>('student');
+
+  return (
+    <div className="rounded-lg border-2 border-blue-100 bg-white shadow-sm">
+      {/* ヘッダー（クリックで展開） */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex w-full items-center justify-between p-5 text-left transition-colors hover:bg-blue-50"
+      >
+        <div>
+          <h3 className="text-xl font-bold text-navy-800">
+            {testimonial.studentName}（{testimonial.grade}）
+          </h3>
+          <p className="mt-1 text-base font-semibold text-blue-600">
+            {testimonial.school} 合格
+          </p>
+        </div>
+        <ChevronDown
+          className={`h-6 w-6 text-navy-400 transition-transform ${isOpen ? 'rotate-180' : ''
+            }`}
+        />
+      </button>
+
+      {/* 展開コンテンツ */}
+      {isOpen && (
+        <div className="border-t border-blue-100 p-5">
+          {/* タブ切り替え */}
+          <div className="mb-4 flex gap-2">
+            <button
+              onClick={() => setActiveTab('student')}
+              className={`rounded-lg px-4 py-2 text-base font-semibold transition-all ${activeTab === 'student'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+            >
+              生徒の声
+            </button>
+            <button
+              onClick={() => setActiveTab('parent')}
+              className={`rounded-lg px-4 py-2 text-base font-semibold transition-all ${activeTab === 'parent'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+            >
+              保護者の声
+            </button>
+          </div>
+
+          {/* コンテンツ */}
+          <div className="rounded-lg bg-gray-50 p-5">
+            <p className="whitespace-pre-wrap text-base leading-relaxed text-navy-700">
+              {activeTab === 'student'
+                ? testimonial.studentVoice
+                : testimonial.parentVoice}
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function AboutPage() {
+  // 年度選択の状態管理
+  const [selectedYear, setSelectedYear] = useState<2025 | 2024 | 2023>(2025);
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-8">
       <Link
@@ -407,20 +580,58 @@ export default function AboutPage() {
       {/* Section 5.5: 2025年合格実績 - 新規追加 */}
       <section className="mb-16">
         <SectionHeader
-          title="2025年 合格実績"
+          title="合格実績"
           icon={Award}
         />
         <p className="mb-6 text-base text-navy-600">
           LEFYの生徒たちが合格した学校の一覧です。
         </p>
+
+        {/* 年度選択ボタン */}
+        <div className="mb-6 flex justify-center gap-3">
+          {([2025, 2024, 2023] as const).map((year) => (
+            <button
+              key={year}
+              onClick={() => setSelectedYear(year)}
+              className={`rounded-lg px-6 py-2.5 text-base font-semibold transition-all ${selectedYear === year
+                ? 'bg-blue-600 text-white shadow-md'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+            >
+              {year}年
+            </button>
+          ))}
+        </div>
+
+        {/* 選択された年度の合格校 */}
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-          {results2025.map((school, index) => (
+          {resultsByYear[selectedYear].map((school: string, index: number) => (
             <div
               key={index}
               className="flex items-center justify-center rounded-lg border-2 border-blue-200 bg-white px-4 py-3 text-center text-base font-semibold text-navy-800 shadow-sm transition-all hover:border-blue-400 hover:shadow-md"
             >
               {school}
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Section 5.6: 合格者の声 - 新規追加 */}
+      <section className="mb-16">
+        <SectionHeader
+          title="合格者の声"
+          icon={MessageCircle}
+        />
+        <p className="mb-6 text-base text-navy-600">
+          LEFYで夢を叶えた生徒と保護者の声をご紹介します。
+        </p>
+
+        <div className="space-y-4">
+          {testimonials.map((testimonial) => (
+            <TestimonialCard
+              key={testimonial.id}
+              testimonial={testimonial}
+            />
           ))}
         </div>
       </section>
