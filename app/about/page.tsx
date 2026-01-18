@@ -670,36 +670,67 @@ export default function AboutPage() {
       {/* Section 5: Principal（塾長紹介）- テキスト更新 */}
       <section className="mb-16">
         <SectionHeader title="LEFYの塾長" icon={User} />
-        <div className="grid gap-8 sm:grid-cols-2">
-          <div className="flex flex-col items-center rounded-lg border border-navy-100 bg-white p-4 text-center shadow-sm">
-            <div className="mb-3 h-24 w-24 overflow-hidden rounded-full border-2 border-blue-100">
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="flex flex-col items-center rounded-lg border border-navy-100 bg-white p-3 text-center shadow-sm">
+            <div className="mb-2 h-20 w-20 overflow-hidden rounded-full border border-blue-100">
               <Image
                 src="/principal-1.jpg"
                 alt="山本航士"
-                width={96}
-                height={96}
+                width={80}
+                height={80}
                 className="h-full w-full object-cover"
               />
             </div>
-            <h3 className="mb-2 text-base font-bold text-navy-800">山本 航士</h3>
+            <h3 className="mb-1 text-sm font-bold text-navy-800">山本 航士</h3>
             <p className="text-xs leading-relaxed text-navy-600">
               聖光学院高等学校を卒業し、慶應義塾大学経済学部に入学。慶應義塾大学在学時に服部と出会い、共に学生団体を立ち上げ、法人化。大学卒業後は、コンサルティング会社に入社し、退職後、LEFYを創業。
             </p>
           </div>
-          <div className="flex flex-col items-center rounded-lg border border-navy-100 bg-white p-4 text-center shadow-sm">
-            <div className="mb-3 h-24 w-24 overflow-hidden rounded-full border-2 border-blue-100">
+          <div className="flex flex-col items-center rounded-lg border border-navy-100 bg-white p-3 text-center shadow-sm">
+            <div className="mb-2 h-20 w-20 overflow-hidden rounded-full border border-blue-100">
               <Image
                 src="/principal-2.jpg"
                 alt="服部貴哉"
-                width={96}
-                height={96}
+                width={80}
+                height={80}
                 className="h-full w-full object-cover"
               />
             </div>
-            <h3 className="mb-2 text-base font-bold text-navy-800">服部 貴哉</h3>
+            <h3 className="mb-1 text-sm font-bold text-navy-800">服部 貴哉</h3>
             <p className="text-xs leading-relaxed text-navy-600">
               神奈川大学附属高等学校を卒業し、慶應義塾大学法学部に入学。慶應義塾大学在学時に山本と出会い、共に学生団体を立ち上げ、法人化。大学卒業後は、東証プライム市場上場企業の総合商社に入社し、LEFYの創業を機に退職。
             </p>
+          </div>
+        </div>
+
+        {/* YouTube動画 */}
+        <div className="mt-8 space-y-6">
+          <h3 className="text-center text-lg font-bold text-navy-800">LEFYの紹介動画</h3>
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* 動画1 */}
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <div className="relative" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src="https://www.youtube.com/embed/TDDp59h-fmQ"
+                  title="LEFY紹介動画1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+            {/* 動画2 */}
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <div className="relative" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src="https://www.youtube.com/embed/nTHk_M8VvV4"
+                  title="LEFY紹介動画2"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
