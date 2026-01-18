@@ -1,0 +1,27 @@
+'use client';
+
+import './globals.css';
+import { Header } from '@/components/layout/header';
+import { Footer } from '@/components/layout/footer';
+import { FloatingCTA } from '@/components/layout/floating-cta';
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="ja">
+      <head>
+        <title>LEFY - 中学受験個別指導塾</title>
+        <meta name="description" content="中学受験個別指導塾LEFY（レフィー）の資料請求ありがとうございます。" />
+      </head>
+      <body className="bg-white text-navy-800 antialiased">
+        <Header />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
+        <FloatingCTA />
+      </body>
+    </html>
+  );
+}
