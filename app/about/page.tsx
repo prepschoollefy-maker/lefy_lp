@@ -284,14 +284,23 @@ lefyの先生方には心より感謝しています。本当にありがとう�
 ];
 
 // 悩みチェックリスト
+// お悩みデータ（3つに集約）
 const concerns = [
-  '宿題が多くて、直し・復習が崩れる',
-  'テスト直しをしても、次の点数に活きない',
-  '算数が「分かったつもり」で止まり、類題で落ちる',
-  '親が管理しないと回らない／家庭が疲れる',
-  '何を捨てて何をやるべきか分からない',
-  '志望校と優先順位が曖昧で不安',
-  '集団のペースが合わないことがある',
+  {
+    image: '/concern-1.png',
+    title: '集団塾のペースに追いつけない',
+    description: '毎月のテストも復習したいが、毎週の宿題で手一杯。すべてやりきれないが、何を捨てて、どれには絶対に取り組むべきなのかの取捨選択が難しい。着実に偏差値が伸びる学習サイクルを作りたい。',
+  },
+  {
+    image: '/concern-2.png',
+    title: 'お子さんが親の言うことを聞いてくれない',
+    description: '学年が上がるにつれて、お子さんはなかなか親の言うことを素直に受け入れてくれなくなってしまうもの。宿題をやってほしいだけなのに喜嘩となり、親のストレスもたまってしまう。',
+  },
+  {
+    image: '/concern-3.png',
+    title: '親の負担が大きい／親が共働き',
+    description: '学年が上がると中学受験の内容は大人でも理解が難しいものがたくさん。また、親が仕事をしていると、毎週の塾の宿題の実施状況だけでも追うのが難しいのに、中身までフォローする余裕がない。',
+  },
 ];
 
 // 3つの価値提案
@@ -534,23 +543,42 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Section 2: PainChecklist */}
+      {/* Section 2: PainChecklist - 青背景デザイン */}
       <section className="mb-16">
-        <SectionHeader title="こんなお悩みはありませんか？" icon={CheckCircle2} />
-        <p className="mb-5 text-base text-navy-600">
-          1つでも当てはまれば、回し方を整えるだけで伸びやすくなります
-        </p>
-        <div className="grid gap-3 sm:grid-cols-2">
-          {concerns.map((concern, index) => (
-            <div
-              key={index}
-              className="flex items-start gap-3 rounded-lg border border-navy-100 bg-white p-4 shadow-sm"
-            >
-              {/* 青色に変更 */}
-              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-600" />
-              <p className="text-base text-navy-700">{concern}</p>
-            </div>
-          ))}
+        <div className="rounded-3xl bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 p-8 md:p-12">
+          <h2 className="mb-2 text-center text-2xl font-bold text-white md:text-3xl">
+            SAPIX・グノーブルなどの集団塾に通われていて、
+          </h2>
+          <h2 className="mb-8 text-center text-2xl font-bold text-white md:text-3xl">
+            こんなことはありませんか？
+          </h2>
+
+          <div className="space-y-6">
+            {concerns.map((concern, index) => (
+              <div key={index} className="flex items-start gap-4 md:gap-6">
+                {/* 丸い画像 */}
+                <div className="shrink-0">
+                  <div className="h-20 w-20 overflow-hidden rounded-full bg-white shadow-lg md:h-24 md:w-24">
+                    <Image
+                      src={concern.image}
+                      alt={concern.title}
+                      width={96}
+                      height={96}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* テキスト */}
+                <div className="flex-1 text-white">
+                  <h3 className="mb-2 text-lg font-bold md:text-xl">{concern.title}</h3>
+                  <p className="text-sm leading-relaxed text-blue-50 md:text-base">
+                    {concern.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
