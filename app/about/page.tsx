@@ -13,27 +13,51 @@ const cramSchools = [
   'SAPIX', 'Gnoble', '日能研', '四谷大塚', '希学園', '浜学園', '早稲アカ'
 ];
 
-// 年度別合格実績データ
-const resultsByYear: Record<2025 | 2024 | 2023, string[]> = {
-  2025: [
-    '愛光', '青山学院横浜英和', '浅野', '市川', '開成', '開智',
-    '神奈川大学附属', '鎌倉学園', '関東学院', '桐蔭学園', '桐光学園',
-    '香蘭', '埼玉栄', '栄東（東大クラス特待・難関大）',
-    '佐久長聖（特待C含む）', 'サレジオ学院', '静岡聖光', '淑徳与野',
-    '逗子開成', '聖光学院', '東京都市大学等々力（特選）',
-    '藤嶺学園藤沢', '日本大学', '日本大学藤沢',
-    '三田国際（ISC、MSTC）', '武相', '八雲学園',
-    '山手学院（特待含む）', '横浜創英', '早稲田佐賀'
-  ],
-  2024: [
-    '栄光学園', '神奈川大学附属', '佐久長聖', '佐久長聖（特待B）',
-    'サレジオ学院', '逗子開成', '中央大学附属横浜', '桐蔭学園（特待）',
-    '森村学園（特待）', '山手学院'
-  ],
-  2023: [
-    'フェリス女学院', '佐久長聖（特待A）', '田園調布学園（午後算数）',
-    '桐光学園', '静岡聖光', '関東学院', '宝仙学園（特待）'
-  ]
+// 年度別・学校種別合格実績データ
+interface SchoolCategory {
+  boys: string[];      // 男子校
+  girls: string[];     // 女子校
+  coed: string[];      // 共学
+}
+
+const resultsByYear: Record<2025 | 2024 | 2023, SchoolCategory> = {
+  2025: {
+    boys: [
+      '開成', '浅野', '聖光学院', 'サレジオ学院', '逗子開成',
+      '鎌倉学園', '静岡聖光', '藤嶺学園藤沢', '武相'
+    ],
+    girls: [
+      '香蘭', '淑徳与野'
+    ],
+    coed: [
+      '愛光', '青山学院横浜英和', '市川', '開智', '神奈川大学附属',
+      '関東学院', '桐蔭学園', '桐光学園', '埼玉栄', '栄東（東大クラス特待・難関大）',
+      '佐久長聖（特待C含む）', '東京都市大学等々力（特選）',
+      '日本大学', '日本大学藤沢', '三田国際（ISC、MSTC）',
+      '八雲学園', '山手学院（特待含む）', '横浜創英', '早稲田佐賀'
+    ]
+  },
+  2024: {
+    boys: [
+      '栄光学園', 'サレジオ学院', '逗子開成'
+    ],
+    girls: [],
+    coed: [
+      '神奈川大学附属', '佐久長聖', '佐久長聖（特待B）',
+      '中央大学附属横浜', '桐蔭学園（特待）', '森村学園（特待）', '山手学院'
+    ]
+  },
+  2023: {
+    boys: [
+      '静岡聖光'
+    ],
+    girls: [
+      'フェリス女学院', '田園調布学園（午後算数）'
+    ],
+    coed: [
+      '佐久長聖（特待A）', '桐光学園', '関東学院', '宝仙学園（特待）'
+    ]
+  }
 };
 
 // 合格者の声データ
@@ -735,16 +759,58 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {/* 選択された年度の合格校 */}
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-          {resultsByYear[selectedYear].map((school: string, index: number) => (
-            <div
-              key={index}
-              className="flex items-center justify-center rounded-lg border-2 border-blue-200 bg-white px-4 py-3 text-center text-base font-semibold text-navy-800 shadow-sm transition-all hover:border-blue-400 hover:shadow-md"
-            >
-              {school}
+        {/* 選択された年度の合格校 - カテゴリ別表示 */}
+        <div className="space-y-6">
+          {/* 男子校セクション */}
+          {resultsByYear[selectedYear].boys.length > 0 && (
+            <div>
+              <h4 className="mb-3 text-sm font-semibold text-blue-700">男子校</h4>
+              <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
+                {resultsByYear[selectedYear].boys.map((school: string, index: number) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-center rounded border-2 border-blue-400 bg-white px-2 py-1.5 text-center text-sm font-semibold text-navy-800 shadow-sm transition-all hover:border-blue-600 hover:shadow-md"
+                  >
+                    {school}
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+          )}
+
+          {/* 女子校セクション */}
+          {resultsByYear[selectedYear].girls.length > 0 && (
+            <div>
+              <h4 className="mb-3 text-sm font-semibold text-rose-700">女子校</h4>
+              <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
+                {resultsByYear[selectedYear].girls.map((school: string, index: number) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-center rounded border-2 border-rose-400 bg-white px-2 py-1.5 text-center text-sm font-semibold text-navy-800 shadow-sm transition-all hover:border-rose-600 hover:shadow-md"
+                  >
+                    {school}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 共学セクション */}
+          {resultsByYear[selectedYear].coed.length > 0 && (
+            <div>
+              <h4 className="mb-3 text-sm font-semibold text-green-700">共学</h4>
+              <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
+                {resultsByYear[selectedYear].coed.map((school: string, index: number) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-center rounded border-2 border-green-400 bg-white px-2 py-1.5 text-center text-sm font-semibold text-navy-800 shadow-sm transition-all hover:border-green-600 hover:shadow-md"
+                  >
+                    {school}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
