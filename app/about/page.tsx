@@ -289,17 +289,41 @@ const concerns = [
   {
     image: '/concern-1.png',
     title: '集団塾のペースに追いつけない',
-    description: '毎月のテストも復習したいが、毎週の宿題で手一杯。すべてやりきれないが、何を捨てて、どれには絶対に取り組むべきなのかの取捨選択が難しい。着実に偏差値が伸びる学習サイクルを作りたい。',
+    description: (
+      <>
+        毎月のテストも復習したいが、毎週の宿題で手一杯。すべてやりきれないが、何を捨てて、どれには絶対に取り組むべきなのかの取捨選択が難しい。着実に偏差値が伸びる
+        <span className="border-b-2 border-yellow-400 bg-yellow-100">
+          学習サイクルを作りたい
+        </span>
+        。
+      </>
+    ),
   },
   {
     image: '/concern-2.png',
     title: 'お子さんが親の言うことを聞いてくれない',
-    description: '学年が上がるにつれて、お子さんはなかなか親の言うことを素直に受け入れてくれなくなってしまうもの。宿題をやってほしいだけなのに喜嘩となり、親のストレスもたまってしまう。',
+    description: (
+      <>
+        学年が上がるにつれて、お子さんはなかなか親の言うことを素直に受け入れてくれなくなってしまうもの。宿題をやってほしいだけなのに喜嘩となり、
+        <span className="border-b-2 border-yellow-400 bg-yellow-100">
+          親のストレスもたまってしまう
+        </span>
+        。
+      </>
+    ),
   },
   {
     image: '/concern-3.png',
     title: '親の負担が大きい／親が共働き',
-    description: '学年が上がると中学受験の内容は大人でも理解が難しいものがたくさん。また、親が仕事をしていると、毎週の塾の宿題の実施状況だけでも追うのが難しいのに、中身までフォローする余裕がない。',
+    description: (
+      <>
+        学年が上がると中学受験の内容は大人でも理解が難しいものがたくさん。また、親が仕事をしていると、毎週の塾の宿題の実施状況だけでも追うのが難しいのに、
+        <span className="border-b-2 border-yellow-400 bg-yellow-100">
+          中身までフォローする余裕がない
+        </span>
+        。
+      </>
+    ),
   },
 ];
 
@@ -543,17 +567,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Section 2: PainChecklist - 青背景デザイン */}
-      <section className="mb-16">
-        <div className="rounded-3xl bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 p-8 md:p-12">
-          <h2 className="mb-2 text-center text-2xl font-bold text-white md:text-3xl">
-            SAPIX・グノーブルなどの集団塾に通われていて、
-          </h2>
-          <h2 className="mb-8 text-center text-2xl font-bold text-white md:text-3xl">
-            こんなことはありませんか？
+      {/* Section 2: PainChecklist - 画面横いっぱい青背景 */}
+      <section className="-mx-4 mb-20 md:-mx-8">
+        <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 py-12 px-6 md:py-16 md:px-12">
+          <h2 className="mb-10 text-center text-3xl font-bold text-white md:text-4xl">
+            こんなお悩みありませんか？
           </h2>
 
-          <div className="space-y-6">
+          <div className="mx-auto max-w-4xl space-y-6">
             {concerns.map((concern, index) => (
               <div key={index} className="flex items-start gap-4 md:gap-6">
                 {/* 丸い画像 */}
@@ -572,9 +593,9 @@ export default function AboutPage() {
                 {/* テキスト */}
                 <div className="flex-1 text-white">
                   <h3 className="mb-2 text-lg font-bold md:text-xl">{concern.title}</h3>
-                  <p className="text-sm leading-relaxed text-blue-50 md:text-base">
+                  <div className="text-sm leading-relaxed text-blue-50 md:text-base">
                     {concern.description}
-                  </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -590,8 +611,11 @@ export default function AboutPage() {
       </section>
 
       {/* Section 4: TwoWays */}
-      <section className="mb-16">
-        <SectionHeader title="LEFYは2つの通い方があります" />
+      <section className="mb-20">
+        <div className="mb-8 text-center">
+          <h2 className="text-3xl font-bold text-navy-800 md:text-4xl">LEFYには2つの通い方があります</h2>
+          <div className="mx-auto mt-3 h-1 w-16 bg-blue-600"></div>
+        </div>
         <p className="mb-6 text-base text-navy-600">
           実際には、併用のご家庭が多い一方で、LEFY中心で進めるケースもあります。
         </p>
@@ -682,8 +706,11 @@ export default function AboutPage() {
       </section>
 
       {/* Section 5: Principal（塾長紹介）- テキスト更新 */}
-      <section className="mb-16">
-        <SectionHeader title="LEFYの塾長" icon={User} />
+      <section className="mb-20">
+        <div className="mb-8 text-center">
+          <h2 className="text-3xl font-bold text-navy-800 md:text-4xl">LEFYの塾長</h2>
+          <div className="mx-auto mt-3 h-1 w-16 bg-blue-600"></div>
+        </div>
         {/* 新しいレイアウト：写真を大きく、より魅力的に */}
         <div className="grid gap-8 md:grid-cols-2">
           {/* 山本航士 */}
@@ -768,11 +795,11 @@ export default function AboutPage() {
       </section>
 
       {/* Section 5.5: 2025年合格実績 - 新規追加 */}
-      <section className="mb-16">
-        <SectionHeader
-          title="合格実績"
-          icon={Award}
-        />
+      <section className="mb-20">
+        <div className="mb-8 text-center">
+          <h2 className="text-3xl font-bold text-navy-800 md:text-4xl">合格実績</h2>
+          <div className="mx-auto mt-3 h-1 w-16 bg-blue-600"></div>
+        </div>
         <p className="mb-6 text-base text-navy-600">
           LEFYの生徒たちが合格した学校の一覧です。
         </p>

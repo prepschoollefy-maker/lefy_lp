@@ -6,7 +6,7 @@ import { MessageCircle, RotateCcw } from 'lucide-react';
 
 // フローデータ定義
 const flowData = {
-    title: '個別指導を利用すべき？判断フローチャート',
+    title: '個別指導を利用すべき？\n判断フローチャート',
     nodes: [
         {
             id: 'q1',
