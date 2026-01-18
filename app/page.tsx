@@ -78,15 +78,9 @@ export default function Home() {
           </div>
 
           {/* メインコンテンツ */}
-          <div className="relative animate-fade-in-up rounded-2xl bg-gradient-to-br from-blue-50 via-white to-purple-50 p-8 text-center shadow-xl">
-            {/* キラキラアイコン */}
-            <div className="mb-4 flex justify-center gap-2">
-              <span className="animate-sparkle text-3xl">✨</span>
-              <span className="animate-sparkle-delay text-3xl">🎉</span>
-              <span className="animate-sparkle text-3xl">✨</span>
-            </div>
+          <div className="relative animate-fade-in-up rounded-2xl bg-white p-8 text-center shadow-xl border-2 border-blue-100">
 
-            <h1 className="mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl">
+            <h1 className="mb-6 text-4xl font-bold text-navy-800 sm:text-5xl">
               資料請求
               <br />
               ありがとうございます！
