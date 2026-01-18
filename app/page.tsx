@@ -69,6 +69,12 @@ export default function Home() {
             <br />
             ありがとうございます！
           </h1>
+          <p className="mb-2 text-base leading-relaxed text-navy-700">
+            郵送資料が届くまでに2日ほどかかる場合がございます。
+          </p>
+          <p className="mb-2 text-base leading-relaxed text-navy-700">
+            本ページでは、郵送資料の要点をまとめておりますので、お手軽にご確認いただけます。
+          </p>
         </section>
 
         <section className="mb-12">
