@@ -124,6 +124,138 @@ LEFYでの自習は、自分で時間を決めて取り組み、尚且つ合間�
 「個別塾は嫌い！」から今では今後も通塾したい塾になりました。
 
 中学受験は終わりましたが、学ぶことはこれで終わりではないので今後もご指導いただきたいと考えております。 本当にありがとうございました。`
+  },
+  {
+    id: 'ku',
+    studentName: 'K.U.君',
+    school: '開成・聖光学院',
+    grade: '精華小学校',
+    studentVoice: `僕は６年生の夏休み明けに算数のスランプに陥り、塾のマンスリーテストでも点が取れなくなってしまいました。問題が解けず算数が嫌いになっていました。
+
+このような状態では集団授業より個別指導で算数を見てもらったほうが良いのではと思い、友人も通っていたLEFYに通う事にしました。
+
+LEFYは自習室も完備され、落ち着いて勉強することができ、先生の教え方も優しく、僕がミスをしても温かく指摘してくれました。
+
+入試直前期には第一志望校の過去問対策をしてもらい、僕の欠点を直すための色々なアドバイスを的確にしてくれ、入試の前日にもミスを防ぐための対策をメールしてくれました。そのおかげで入試本番では算数が良くでき、開成中学と聖光学院のダブルで合格ができました。LEFYの先生にはとても感謝しています。`,
+    parentVoice: `LEFYには6年生の10月から入試までの4カ月間お世話になりました。
+
+夏休み明けから算数の成績が急降下し、大手塾のクラスも２つ落ちし、息子自身も算数わからない！やりたくない！と拒否反応が強くなっておりました。算数が得意な周りの子達がスラスラ解いているのに、自分は解けないと悩んでいたため、環境を変え個別で算数を教えていただけるところを探し、入試までのギリギリのタイミングでLEFYに入塾しました。
+
+LEFYでは大手塾のテキストで解けない問題の解説や、志望校の過去問の解説などサポートをお願いしました。息子は通い始めてすぐに、「LEFYの先生は僕の気持ちに寄り添ってくれる」と嬉しそうに報告してくれ、10月末以降からの模試では算数の点数が急回復しました。入試直前には、先生からミスを減らすための解き方をアドバイスいただき、その解き方を入試本番で実践でき合格を勝ち取ることができました。
+
+短期間でここまで息子を引き上げてもらえたことに、感謝の気持ちでいっぱいです。
+本当にありがとうございました。`
+  },
+  {
+    id: 'mk',
+    studentName: 'M.K.さん',
+    school: '三田国際学園中学校（ISC、MSTC）',
+    grade: '私立小学校',
+    studentVoice: `私は私立小学校に通っているのですが、算数が４年生くらいから一気に難しくなって困っていました。
+当時は集団塾に通っていたのですが、算数の先生の説明が理解しづらく、質問もしづらかったため、わからない問題がどんどん積み重なっていきました。
+
+そんな時、小学校の友達が通っていると聞き、LEFYを知りました。
+最初に学習相談で伺ったとき、先生の教え方がとても分かりやすくて「ここで教えてもらいたい！」と思ったのをよく覚えています。
+実際に通い始めると、私の苦手な箇所を的確に見抜いてくださり、授業でつまずいた問題をひとつひとつクリアにしていくことができました。
+入試直前には志望校の出題傾向に似た問題を出すほかの学校の過去問に挑戦し、効果的に対策を進めるよう提案をしていただきました。
+
+特に私を担当してくださったY先生は、厳しい中にも面白さがある方で、私との相性がとても良かったと思います。要点を押さえてツッコミを入れてくださるので、苦手な箇所でも楽しく学習することができました。
+おかげさまで無事に第一志望校に合格することができました。今後、中高での学習や大学受験で困った時には、ぜひまたLEFYの先生方に教えてもらいたいと思っています。
+本当にありがとうございました。`,
+    parentVoice: `Y先生の適切かつ的確なご指導には、心より感謝しております。
+娘は自分で書いている通り、LEFYに通い始めてから算数への理解がぐっと深まったと感じます。
+
+最初のうちは対面でご指導いただいていたのですが、我が家から通うのが難しくなった高学年以降はオンラインでお願いするようになりました。
+書画カメラを準備し、古いPCやiPadを使って手探りで始めましたが、先生と娘の間でしっかりとした信頼関係ができていたおかげで、オンラインでもスムーズに授業を進めていただけました。
+授業中、時折聞こえてくる先生の鋭いツッコミと優しいアドバイスは、少しおっとりしている娘には良い刺激になったようです。
+直前期も変わらず同じテンションでご指導いただいたおかげで、娘は本番でも緊張せず落ち着いて受験に臨めたと思います。
+
+おかげさまで第一志望校に合格し、親としても本当に嬉しく、感謝の気持ちでいっぱいです。
+娘が言うように、これからまた学習面で悩んだときにはLEFYを頼らせていただきたいと思っております。
+卒業後も時々お伺いすることがあるかと思いますが、今後ともどうぞよろしくお願い申し上げます。`
+  },
+  {
+    id: 'sy',
+    studentName: 'S.Y.君',
+    school: '日本大学藤沢中学校',
+    grade: '横浜市立川上北小学校',
+    studentVoice: `僕はLEFYに入る前に他の塾に通っていました。
+
+その時は苦手単元が分からず困っていましたが、LEFYではそこを指摘してくださったので「ここが苦手ポイントなんだな」と気付くことができました。
+先生方の指導内容がとても丁寧で分かりやすく、LEFYだから日大藤沢に合格することができました。中学に入学しても通い続けたいです。
+
+指導してくださった先生方、僕を合格させてくれて本当にありがとうございました。`,
+    parentVoice: `塾のカリキュラムを上手く回せず親子で心身共に疲弊していた5年生の秋、LEFYに出会いました。
+今までどんどん進むカリキュラムをこなすのに精一杯で、理解に繋がらずどうしたら良いのか迷走していました。
+LEFYでは個人の出来ているところと課題を分析して授業内容、家庭学習のスケジュールまで丁寧に対応して下さいました。
+都度現状を家庭と共有し、課題のアップデートをして頂いたので親の精神的負担がとても軽かったです。
+そして何より息子の個性に寄り添っていただいたことで、追い込みの勉強に耐え抜く力と自習する力をつけていただきました。
+受験当日息子は自ら自走しチャレンジし続けました。
+
+LEFYの先生方のお陰で親子共に感無量の受験となりました。本当に有難うございました。`
+  },
+  {
+    id: 'mm',
+    studentName: 'M.M.君',
+    school: '横浜創英中学校',
+    grade: '横浜市立みなとみらい本町小学校',
+    studentVoice: `僕は4年生の終わりから集団塾に通い、5年生からは個別指導塾に通っていましたが、社会以外は苦手で全く成績が上がりませんでした。このままではダメだと思い、6年生の10月からレフィーにも通うことにしました。
+レフィーに通い始めてからは、今まで理解できなかった国語と算数の問題がどんどん解けるようになっていき、同時に通っていた他の個別指導塾の先生にも12月頃から急にできるようになったとびっくりされました。
+
+受験した2校ともに合格することができたのはレフィーの先生方のおかげだと感謝しています。
+受験は終わりましたが、3月からまたレフィーに通います！
+これからもよろしくお願いします！！`,
+    parentVoice: `息子は運動が大好きで勉強はめっきり苦手なタイプなので、集団塾では授業についていけず、できない子を伸ばすというような個別指導塾にも期待を込めて通わせてみましたが全く伸びませんでした。
+塾に行っているというだけで勉強した気になり、他に習いごともしていたため自宅学習もままならない状態で、6年生の9月の模試でも偏差値30台をとり、どこの学校にも合格するには絶望的な結果で精神的にも追い込まれていました。
+
+そんな息子が6年生の10月からレフィーに通うようになり、あんなに苦手だった国語と算数が通う毎に伸びていき本当に驚きました。
+同じ問題でも、レフィーの先生の説明は他の塾の先生とは違い、とてもわかりやすかったそうです。
+
+受験直前の4ヶ月という短い期間のなかで、理解できていなかったところが多くあったにも関わらず、それを丁寧につぶしてくださり、自信を持って試験に臨めるところまで導いてくださったレフィーの先生方には、親子共々心から感謝の気持ちでいっぱいです！！
+本当にありがとうございました！`
+  },
+  {
+    id: 'sw',
+    studentName: 'S.W.さん',
+    school: '香蘭中学校',
+    grade: '精華小',
+    studentVoice: `私は算数や理科が苦手でしたが、先生が丁寧に優しく教えてくださったおかげで、月に一度のテストの成績が急激に上がりました。その後は成績が安定し、無事に志望校に合格することができました。`,
+    parentVoice: `中学受験は、先生方のサポートのおかげで無事に終えることができました。振り返れば短い期間でしたが、まるでジェットコースターに乗っているような日々でした。そんな中、lefyでY先生に出会ってからはようやく落ち着いて過ごせるようになり、感謝の気持ちでいっぱいです。
+
+娘はある大手塾に通っていましたが、先生からのサポートがもともと少なく、6年生になるとさらに不足を感じるようになりました。志望校の相談や過去問の採点においても、十分なフォローがなく物足りませんでした。算数の偏差値も不安定でしたが、塾の先生に相談しても望むような答えが返ってこないばかりか、保護者としての不安な気持ちも理解してもらえませんでした。
+
+そんな時に出会ったのがlefyのY先生です。初回の面談で即入室を決めました。入室してからの約1年という短い期間でしたが、娘の算数に対する苦手意識は少しずつ薄れて自信が持てるようになり、偏差値も安定していきました。教室の先生方は、定期的に面談を行い、親子の日々の様子を細かく把握してくださっていました。
+
+志望校を決める際、通っていた大手塾では娘が希望する学校を積極的に応援してもらえず、先生が考えた学校ばかりを勧められ、正直嫌な思いをしました。しかし、lefyでY先生に相談したところ、「娘さんの気持ちを尊重し、挑戦してみましょう。全力でサポートしますのでご安心ください」と言っていただき、とても安心できました。
+
+先生方の細やかな気遣いのおかげで、受験生活をスムーズに終えることができ、ギスギスした日々も少なく済みました。親子ともに心のケアがとても重要であることを改めて感じました。また、この受験を通じて子どもを信じる大切さを学びました。
+
+lefyの先生方には心より感謝しています。本当にありがとうございました。`
+  },
+  {
+    id: 'nm',
+    studentName: 'N.Mさん',
+    school: 'フェリス女学院',
+    grade: '私立関東学院小学校',
+    studentVoice: `LEFYには入試本番の３カ月前から通い、算数と理科の苦手分野の対策をしてもらいました。通い始めたころは、志望校別模試でも算数と理科があまり良い結果がでず、不安な状況が続いていましたが、１月ごろにはフェリスの過去問でも算数で点数を稼げるようなレベルになりました。また、多くの過去問の解説をしてもらい、とても役に立ちました。
+難しい問題をたくさん解きましたが、とくに灘の算数の問題を解いたことが印象に残っています。みなさんも受験頑張ってください。`,
+    parentVoice: `入試前３カ月という直前とも言える時期に、短期間で娘の苦手範囲やレベルを把握し、ご指導下さり、ありがとうございました。弱点に対する嫌悪感が減り、自信を持って入試を迎えることができました。
+両親ともに中学受験の経験がなく、学習面、精神面ともにサポートできない分を補っていただき、ありがとうございました。
+また、田園調布学園をはじめ、算数１科目で受験できる学校を複数検討していましたが、算数１科目入試の過去問は解説が掲載されていないことが多く、対策に悩んでいました。
+これらの解説サポートをしていただけたことは非常に助かった点です。`
+  },
+  {
+    id: 'ty',
+    studentName: 'T.Yさん',
+    school: '桐光学園',
+    grade: '私立S小学校',
+    studentVoice: `苦手単元を習得できるまで何度も繰り返し教えてくれたので、徐々に理解できるようになり、自信につながりました。自習の合間に一緒に志望校の動画を見ながら、合格した後の楽しい学校生活を想像することで、受験に対してのやる気を起こさせてくれました。
+先生方が心優しく、学習面だけでなく、自習や授業の合間に学校生活や趣味の話を聞いてくれてリラックスしながら学習することができました。また、自習室が広くて居心地がよく、家で勉強するよりも集中できました。受験生のみなさんも、基礎をしっかりかため、苦手単元は早めに克服したほうがいいです。受験当日にも学力は伸びるので、最後まで勉強をあきらめないでください。`,
+    parentVoice: `集団塾に通っていたのですが、６年の10月になっても苦手科目が克服できない状況に思い悩んでいたときにレフィーに出会いました。先生方に親身になってご相談にのっていただいたことで、息子が入試までにやるべきことが明確になり、それを達成するためにはレフィーでご指導いただくことが最善策であると考え、入塾することに決めました。
+
+入塾したのが10月中旬と入試まで短期間しかなかったため、苦手科目に絞ってご指導いただけたことがよかったです。勉強に中々前向きに取り組むことができなかった息子の性格に寄り添っていただくことでモチベーションがあがり、レフィーで過ごす授業時間や自習時間は大変ながらも楽しく勉強できる時間となったようです。志望校選択時も時間をかけてアドバイスいただいたおかげで多数の学校より合格をいただけたと思っております。
+
+ただ教えるという形だけの塾ではなく一人ひとりに合った指導方針のもと的確にご指導いただけることがよかったです。また先生方とやりとりさせていただく中で絶大な信頼を寄せることができ、親子ともに勉強面で精神面でも助けていただきました。定期的な面談だけではなく、お電話やメールで指導内容や息子の様子などを随時ご連絡いただくなど、日々の細やかなサポートに感謝しておりました。`
   }
 ];
 
@@ -246,8 +378,8 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
             <button
               onClick={() => setActiveTab('student')}
               className={`rounded-lg px-4 py-2 text-base font-semibold transition-all ${activeTab === 'student'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
             >
               生徒の声
@@ -255,8 +387,8 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
             <button
               onClick={() => setActiveTab('parent')}
               className={`rounded-lg px-4 py-2 text-base font-semibold transition-all ${activeTab === 'parent'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
             >
               保護者の声
@@ -395,7 +527,7 @@ export default function AboutPage() {
       {/* Section 2: PainChecklist */}
       <section className="mb-16">
         <SectionHeader title="こんなお悩みはありませんか？" icon={CheckCircle2} />
-        <p className="mb-5 text-sm text-navy-600">
+        <p className="mb-5 text-base text-navy-600">
           1つでも当てはまれば、回し方を整えるだけで伸びやすくなります
         </p>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -406,7 +538,7 @@ export default function AboutPage() {
             >
               {/* 青色に変更 */}
               <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-600" />
-              <p className="text-sm text-navy-700">{concern}</p>
+              <p className="text-base text-navy-700">{concern}</p>
             </div>
           ))}
         </div>
@@ -427,10 +559,10 @@ export default function AboutPage() {
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mb-1 text-lg font-bold text-navy-800">{value.title}</h3>
-                <p className="mb-4 text-xs text-navy-500">{value.subtitle}</p>
+                <p className="mb-4 text-sm text-navy-500">{value.subtitle}</p>
                 <ul className="space-y-2">
                   {value.points.map((point, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-sm text-navy-700">
+                    <li key={idx} className="flex items-start gap-2 text-base text-navy-700">
                       {/* 青色に変更 */}
                       <span className="mt-1 text-blue-600">●</span>
                       <span>{point}</span>
@@ -451,14 +583,14 @@ export default function AboutPage() {
       {/* Section 4: TwoWays */}
       <section className="mb-16">
         <SectionHeader title="LEFYは2つの通い方があります" />
-        <p className="mb-6 text-sm text-navy-600">
-          実際には、併用のご家庭が多い一方で、LEFY中心で進めるケースもあります。どちらも自然な選択です。
+        <p className="mb-6 text-base text-navy-600">
+          実際には、併用のご家庭が多い一方で、LEFY中心で進めるケースもあります。
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
           {/* 左：集団塾併用 - 青色ベースに変更 */}
           <div className="rounded-lg border-2 border-blue-200 bg-white p-6 shadow-sm">
             <div className="mb-4">
-              <span className="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
+              <span className="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-700">
                 集団塾併用
               </span>
               {/* 文言変更 */}
@@ -492,7 +624,7 @@ export default function AboutPage() {
                 志望校特訓/過去問の優先順位づけ
               </li>
             </ul>
-            <p className="text-xs italic text-navy-600">
+            <p className="text-sm italic text-navy-600">
               "回る"だけで、点数のブレが減っていきます。
             </p>
           </div>
@@ -533,7 +665,7 @@ export default function AboutPage() {
                 小さな成功体験で自信と再現性を作る
               </li>
             </ul>
-            <p className="text-sm italic text-navy-600">
+            <p className="text-base italic text-navy-600">
               親の管理負担が減り、お子さまが自走しやすくなります。
             </p>
           </div>
@@ -555,7 +687,7 @@ export default function AboutPage() {
               />
             </div>
             <h3 className="mb-3 text-lg font-bold text-navy-800">山本 航士</h3>
-            <p className="text-xs leading-relaxed text-navy-600">
+            <p className="text-sm leading-relaxed text-navy-600">
               聖光学院高等学校を卒業し、慶應義塾大学経済学部に入学。慶應義塾大学在学時に服部と出会い、共に学生団体を立ち上げ、法人化。大学卒業後は、コンサルティング会社に入社し、退職後、LEFYを創業。
             </p>
           </div>
@@ -570,7 +702,7 @@ export default function AboutPage() {
               />
             </div>
             <h3 className="mb-3 text-lg font-bold text-navy-800">服部 貴哉</h3>
-            <p className="text-xs leading-relaxed text-navy-600">
+            <p className="text-sm leading-relaxed text-navy-600">
               神奈川大学附属高等学校を卒業し、慶應義塾大学法学部に入学。慶應義塾大学在学時に山本と出会い、共に学生団体を立ち上げ、法人化。大学卒業後は、東証プライム市場上場企業の総合商社に入社し、LEFYの創業を機に退職。
             </p>
           </div>
@@ -642,7 +774,7 @@ export default function AboutPage() {
           title="講師は「中学受験のプロ」と「最難関卒の伴走者」"
           icon={Users}
         />
-        <p className="mb-6 text-sm leading-relaxed text-navy-700">
+        <p className="mb-6 text-base leading-relaxed text-navy-700">
           プロ講師に加えて、最難関中高一貫校を卒業し、東大など最難関大に在籍する大学生／大学院生が中心です。
           <br />
           1対1だからこそ、相性まで重視して担当を決めます。
@@ -653,12 +785,12 @@ export default function AboutPage() {
               key={index}
               className="rounded-lg border border-navy-100 bg-white p-5 text-center shadow-sm"
             >
-              <h4 className="mb-2 text-sm font-bold text-navy-800">{teacher.title}</h4>
-              <p className="text-xs leading-relaxed text-navy-600">{teacher.description}</p>
+              <h4 className="mb-2 text-base font-bold text-navy-800">{teacher.title}</h4>
+              <p className="text-sm leading-relaxed text-navy-600">{teacher.description}</p>
             </div>
           ))}
         </div>
-        <p className="mt-4 text-xs text-navy-500">
+        <p className="mt-4 text-sm text-navy-500">
           担当は学年・目的・相性に合わせて最適にマッチングします。
         </p>
       </section>
@@ -668,19 +800,19 @@ export default function AboutPage() {
         <SectionHeader title="授業だけで終わらせない、「ダブル伴走」" />
         <div className="grid gap-4 sm:grid-cols-3">
           <div className="rounded-lg border border-navy-100 bg-white p-5 text-center shadow-sm">
-            <h4 className="mb-2 text-sm font-bold text-navy-800">2名以上担当制</h4>
-            <p className="text-xs text-navy-600">授業担当＋学習設計担当</p>
+            <h4 className="mb-2 text-base font-bold text-navy-800">2名以上担当制</h4>
+            <p className="text-sm text-navy-600">授業担当＋学習設計担当</p>
           </div>
           <div className="rounded-lg border border-navy-100 bg-white p-5 text-center shadow-sm">
-            <h4 className="mb-2 text-sm font-bold text-navy-800">定期報告/面談</h4>
-            <p className="text-xs text-navy-600">状況と方針を共有</p>
+            <h4 className="mb-2 text-base font-bold text-navy-800">定期報告/面談</h4>
+            <p className="text-sm text-navy-600">状況と方針を共有</p>
           </div>
           <div className="rounded-lg border border-navy-100 bg-white p-5 text-center shadow-sm">
-            <h4 className="mb-2 text-sm font-bold text-navy-800">次の打ち手を明確に</h4>
-            <p className="text-xs text-navy-600">次週の最優先を決める</p>
+            <h4 className="mb-2 text-base font-bold text-navy-800">次の打ち手を明確に</h4>
+            <p className="text-sm text-navy-600">次週の最優先を決める</p>
           </div>
         </div>
-        <p className="mt-4 text-sm text-navy-600">
+        <p className="mt-4 text-base text-navy-600">
           "何をどこまでやるか"が明確になると、ご家庭の不安が減ります。
         </p>
       </section>
@@ -702,8 +834,8 @@ export default function AboutPage() {
                   {step.number}
                 </div>
               </div>
-              <h4 className="mb-1 text-sm font-semibold text-navy-800">{step.title}</h4>
-              <p className="text-xs text-navy-600">{step.description}</p>
+              <h4 className="mb-1 text-base font-semibold text-navy-800">{step.title}</h4>
+              <p className="text-sm text-navy-600">{step.description}</p>
             </div>
           ))}
         </div>
@@ -738,10 +870,10 @@ export default function AboutPage() {
               key={index}
               className="group rounded-lg border border-navy-100 bg-white p-5 shadow-sm"
             >
-              <summary className="cursor-pointer text-sm font-semibold text-navy-800 transition-colors hover:text-blue-600">
+              <summary className="cursor-pointer text-base font-semibold text-navy-800 transition-colors hover:text-blue-600">
                 Q: {faq.q}
               </summary>
-              <p className="mt-3 text-sm leading-relaxed text-navy-600">A: {faq.a}</p>
+              <p className="mt-3 text-base leading-relaxed text-navy-600">A: {faq.a}</p>
             </details>
           ))}
         </div>
