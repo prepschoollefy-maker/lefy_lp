@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, Target, Calendar, Users, MessageCircle2, BookOpen, TrendingUp, Clock } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Target, Calendar, Users, MessageCircle, BookOpen, TrendingUp, Clock } from 'lucide-react';
 import { SectionHeader } from '@/components/lefy/section-header';
 import { CTASection } from '@/components/lefy/cta-section';
 
@@ -301,7 +301,7 @@ export default function AboutPage() {
       <section className="mb-12">
         <SectionHeader
           title="無料相談でやること"
-          icon={MessageCircle2}
+          icon={MessageCircle}
           subtitle="1回の相談で、今やるべきことが明確になります"
         />
         <div className="grid gap-4 sm:grid-cols-2">
