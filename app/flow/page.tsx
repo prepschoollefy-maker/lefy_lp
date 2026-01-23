@@ -14,6 +14,7 @@ const steps = [
 学習カウンセリングでのヒアリング内容、体験授業でのご様子を踏まえ、ご入塾後の学習内容をご提案させていただきます。`,
         bgColor: 'bg-white',
         isDark: false,
+        hasCTA: true,
     },
     {
         number: 2,
@@ -22,6 +23,7 @@ const steps = [
         description: '実際の授業を、受講検討科目の数だけご体験いただけます。',
         bgColor: 'bg-gradient-to-br from-sky-100 to-sky-200',
         isDark: false,
+        hasCTA: false,
     },
     {
         number: 3,
@@ -30,6 +32,7 @@ const steps = [
         description: '',
         bgColor: 'bg-gradient-to-br from-sky-200 to-sky-300',
         isDark: false,
+        hasCTA: false,
     },
     {
         number: 4,
@@ -38,6 +41,7 @@ const steps = [
         description: '',
         bgColor: 'bg-gradient-to-br from-sky-300 to-sky-400',
         isDark: false,
+        hasCTA: false,
     },
     {
         number: 5,
@@ -47,6 +51,7 @@ const steps = [
 生徒の状況に応じて、学習計画シートを作成したり、毎回の講義の1週間前に次回講義の内容をメールでヒアリングする方法を取ったりなど、生徒一人ひとりに合わせた最適なプランをご提案します。`,
         bgColor: 'bg-gradient-to-br from-sky-400 to-navy-500',
         isDark: true,
+        hasCTA: false,
     },
     {
         number: 6,
@@ -55,6 +60,7 @@ const steps = [
         description: '',
         bgColor: 'bg-navy-700',
         isDark: true,
+        hasCTA: false,
     },
 ];
 
@@ -62,12 +68,12 @@ export default function FlowPage() {
     return (
         <div className="min-h-screen bg-gray-50 pb-32">
             {/* ヒーロー画像バナー */}
-            <div className="relative h-32 w-full overflow-hidden md:h-48">
+            <div className="relative h-40 w-full overflow-hidden md:h-56">
                 <Image
                     src="/flow-hero.jpg"
                     alt="LEFY教室の様子"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-top"
                     priority
                 />
             </div>
@@ -130,6 +136,20 @@ export default function FlowPage() {
                                             }`}>
                                             {step.description}
                                         </p>
+                                    )}
+                                    {/* ステップ1のCTAボタン */}
+                                    {step.hasCTA && (
+                                        <div className="mt-6">
+                                            <Link
+                                                href="/counseling"
+                                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-green-500 to-green-600 py-2.5 px-5 text-sm font-bold text-white shadow-lg transition-all hover:from-green-600 hover:to-green-700"
+                                            >
+                                                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-xs font-bold text-green-600">
+                                                    無料
+                                                </span>
+                                                学習相談に申し込む
+                                            </Link>
+                                        </div>
                                     )}
                                 </div>
                             </div>
