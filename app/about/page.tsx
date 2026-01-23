@@ -538,11 +538,47 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* こんなお悩みありませんか？セクション */}
-      <div className="mb-12 flex justify-center">
+      {/* Section 2: PainChecklist - 画面横いっぱい青背景 */}
+      <section className="-mx-4 mb-20 md:-mx-8">
+        <div className="bg-gradient-to-br from-navy-600 via-navy-700 to-navy-800 py-12 px-6 md:py-16 md:px-12">
+          <h2 className="mb-10 text-center text-3xl font-bold text-white md:text-4xl">
+            こんなお悩みありませんか？
+          </h2>
+
+          <div className="mx-auto max-w-4xl space-y-6">
+            {concerns.map((concern, index) => (
+              <div key={index} className="flex items-start gap-4 md:gap-6">
+                {/* 丸い画像 */}
+                <div className="shrink-0">
+                  <div className="h-20 w-20 overflow-hidden rounded-full bg-white shadow-lg md:h-24 md:w-24">
+                    <Image
+                      src={concern.image}
+                      alt={concern.title}
+                      width={96}
+                      height={96}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* テキスト */}
+                <div className="flex-1 text-white">
+                  <h3 className="mb-2 text-lg font-bold md:text-xl">{concern.title}</h3>
+                  <div className="text-sm leading-relaxed text-navy-50 md:text-base">
+                    {concern.description}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* アップロードされた画像セクション */}
+      <div className="-mt-8 mb-12 flex justify-center">
         <Image
           src="/concerns-section.png"
-          alt="こんなお悩みありませんか？"
+          alt="LEFYの個別指導で"
           width={1024}
           height={768}
           className="h-auto w-full max-w-5xl"
