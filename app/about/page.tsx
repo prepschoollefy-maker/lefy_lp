@@ -596,13 +596,13 @@ export default function AboutPage() {
         </div>
 
         <div className="space-y-8">
-          {/* STEP 1: LEFYを併用し、集団塾の偏差値UP */}
+          {/* パターン1: LEFYを併用し、集団塾の偏差値UP */}
           <div className="overflow-hidden rounded-xl shadow-lg">
-            {/* STEP バッジとヘッダー */}
-            <div className="relative bg-gradient-to-r from-navy-600 to-navy-700 px-6 py-5 md:px-8">
+            {/* パターンバッジとヘッダー */}
+            <div className="relative bg-gradient-to-r from-navy-600 to-navy-700 px-6 pt-6 pb-5 md:px-8">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                 <div className="rounded-full bg-yellow-400 px-5 py-1.5 text-sm font-bold text-navy-800 shadow-md">
-                  STEP 1
+                  パターン1
                 </div>
               </div>
               <h3 className="mt-2 text-center text-xl font-bold text-white md:text-2xl">
@@ -656,7 +656,7 @@ export default function AboutPage() {
                 <div className="order-first md:order-last">
                   <div className="overflow-hidden rounded-lg shadow-md">
                     <Image
-                      src="/concern-1.png"
+                      src="/pattern-1.jpg"
                       alt="集団塾との併用イメージ"
                       width={400}
                       height={300}
@@ -668,13 +668,13 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* STEP 2: LEFYオーダーメイド受験 */}
+          {/* パターン2: LEFYオーダーメイド受験 */}
           <div className="overflow-hidden rounded-xl shadow-lg">
-            {/* STEP バッジとヘッダー */}
-            <div className="relative bg-gradient-to-r from-rose-600 to-rose-700 px-6 py-5 md:px-8">
+            {/* パターンバッジとヘッダー */}
+            <div className="relative bg-gradient-to-r from-rose-600 to-rose-700 px-6 pt-6 pb-5 md:px-8">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                 <div className="rounded-full bg-yellow-400 px-5 py-1.5 text-sm font-bold text-navy-800 shadow-md">
-                  STEP 2
+                  パターン2
                 </div>
               </div>
               <h3 className="mt-2 text-center text-xl font-bold text-white md:text-2xl">
@@ -728,7 +728,7 @@ export default function AboutPage() {
                 <div className="order-first md:order-last">
                   <div className="overflow-hidden rounded-lg shadow-md">
                     <Image
-                      src="/concern-2.png"
+                      src="/pattern-2.jpg"
                       alt="オーダーメイド受験イメージ"
                       width={400}
                       height={300}
