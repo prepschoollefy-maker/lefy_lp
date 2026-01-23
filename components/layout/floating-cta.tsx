@@ -29,7 +29,7 @@ export function FloatingCTA() {
 
         {/* 入塾の流れ */}
         <Link
-          href="#"
+          href="/flow"
           className="flex flex-1 flex-col items-center justify-center gap-2 py-4 px-2 text-center transition-all hover:bg-navy-700"
         >
           <ClipboardList className="h-6 w-6 text-white" />
