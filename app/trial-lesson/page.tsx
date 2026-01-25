@@ -27,6 +27,10 @@ export default function CounselingPage() {
         thirdChoiceDate: '',
         thirdChoiceStartTime: '',
         thirdChoiceEndTime: '',
+        subject: '',
+        lessonContentPreference: '',
+        lefyDecideDetails: '',
+        specifyDetails: '',
         email: '',
         emailConfirm: '',
         phone1: '',
@@ -451,6 +455,72 @@ export default function CounselingPage() {
                                 </select>
                             </div>
                         </div>
+                    </div>
+
+                    {/* 科目 */}
+                    <div>
+                        <label htmlFor="subject" className="mb-2 block text-sm font-bold text-navy-800">
+                            科目 <span className="text-red-600">*</span>
+                        </label>
+                        <select
+                            id="subject"
+                            name="subject"
+                            value={formData.subject}
+                            onChange={handleChange}
+                            required
+                            className="w-full rounded-lg border-2 border-navy-200 px-4 py-3 text-navy-800 transition-colors focus:border-navy-600 focus:outline-none"
+                        >
+                            <option value="">選択してください</option>
+                            <option value="算数">算数</option>
+                            <option value="国語">国語</option>
+                            <option value="理科">理科</option>
+                            <option value="社会">社会</option>
+                        </select>
+                    </div>
+
+                    {/* 体験授業で扱ってほしい内容 */}
+                    <div>
+                        <label htmlFor="lessonContentPreference" className="mb-2 block text-sm font-bold text-navy-800">
+                            体験授業で扱ってほしい内容 <span className="text-red-600">*</span>
+                        </label>
+                        <select
+                            id="lessonContentPreference"
+                            name="lessonContentPreference"
+                            value={formData.lessonContentPreference}
+                            onChange={handleChange}
+                            required
+                            className="w-full rounded-lg border-2 border-navy-200 px-4 py-3 text-navy-800 transition-colors focus:border-navy-600 focus:outline-none"
+                        >
+                            <option value="">選択してください</option>
+                            <option value="LEFYに決めてほしい">LEFYに決めてほしい</option>
+                            <option value="指定する">指定する</option>
+                        </select>
+
+                        {/* LEFYに決めてほしい場合の詳細 */}
+                        {formData.lessonContentPreference === 'LEFYに決めてほしい' && (
+                            <textarea
+                                name="lefyDecideDetails"
+                                value={formData.lefyDecideDetails}
+                                onChange={handleChange}
+                                required
+                                rows={4}
+                                className="mt-3 w-full rounded-lg border-2 border-navy-200 px-4 py-3 text-navy-800 transition-colors focus:border-navy-600 focus:outline-none"
+                                placeholder="現在お通いの集団塾、および毎月のテストの成績をご入力ください。"
+                            />
+                        )}
+
+                        {/* 指定する場合の詳細 */}
+                        {formData.lessonContentPreference === '指定する' && (
+                            <textarea
+                                name="specifyDetails"
+                                value={formData.specifyDetails}
+                                onChange={handleChange}
+                                required
+                                rows={4}
+                                className="mt-3 w-full rounded-lg border-2 border-navy-200 px-4 py-3 text-navy-800 transition-colors focus:border-navy-600 focus:outline-none"
+                                placeholder="ご指定内容をご記載ください。例：サピックスのデイリーサポート"
+                            />
+                        )}
                     </div>
 
                     {/* メールアドレス */}

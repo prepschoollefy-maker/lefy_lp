@@ -954,20 +954,28 @@ export default function AboutPage() {
           </p>
 
           {/* 年度選択ボタン */}
-          <div className="mb-6 overflow-x-auto">
-            <div className="flex justify-center gap-3 min-w-max px-4">
-              {([2026, 2025, 2024, 2023] as const).map((year) => (
-                <button
-                  key={year}
-                  onClick={() => setSelectedYear(year)}
-                  className={`flex-shrink-0 rounded-lg px-6 py-2.5 text-base font-semibold transition-all ${selectedYear === year
-                    ? 'bg-rose-600 text-white shadow-md'
-                    : 'bg-white/70 text-rose-800 hover:bg-white'
-                    }`}
-                >
-                  {year}年
-                </button>
-              ))}
+          <div className="relative mb-6">
+            <div className="overflow-x-auto scrollbar-hide">
+              <div className="flex justify-center gap-3 min-w-max px-4">
+                {([2026, 2025, 2024, 2023] as const).map((year) => (
+                  <button
+                    key={year}
+                    onClick={() => setSelectedYear(year)}
+                    className={`flex-shrink-0 rounded-lg px-6 py-2.5 text-base font-semibold transition-all ${selectedYear === year
+                      ? 'bg-rose-600 text-white shadow-md'
+                      : 'bg-white/70 text-rose-800 hover:bg-white'
+                      }`}
+                  >
+                    {year}年
+                  </button>
+                ))}
+              </div>
+            </div>
+            {/* スクロールインジケーター - 右側 */}
+            <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-pink-100 to-transparent flex items-center justify-end pr-2 md:hidden">
+              <svg className="h-5 w-5 text-rose-600 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </div>
           </div>
 
