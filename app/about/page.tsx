@@ -20,7 +20,16 @@ interface SchoolCategory {
   coed: string[];      // 共学
 }
 
-const resultsByYear: Record<2025 | 2024 | 2023, SchoolCategory> = {
+const resultsByYear: Record<2026 | 2025 | 2024 | 2023, SchoolCategory> = {
+  2026: {
+    boys: [
+      '海陽'
+    ],
+    girls: [],
+    coed: [
+      '栄東', '開智所沢', '埼玉栄', '宮崎日大'
+    ]
+  },
   2025: {
     boys: [
       '開成', '浅野', '聖光学院', 'サレジオ学院', '逗子開成',
@@ -31,10 +40,10 @@ const resultsByYear: Record<2025 | 2024 | 2023, SchoolCategory> = {
     ],
     coed: [
       '愛光', '青山学院横浜英和', '市川', '開智', '神奈川大学附属',
-      '関東学院', '桐蔭学園', '桐光学園', '埼玉栄', '栄東（東大クラス特待・難関大）',
-      '佐久長聖（特待C含む）', '東京都市大学等々力（特選）',
-      '日本大学', '日本大学藤沢', '三田国際（ISC、MSTC）',
-      '八雲学園', '山手学院（特待含む）', '横浜創英', '早稲田佐賀'
+      '関東学院', '桐蔭学園', '桐光学園', '埼玉栄', '栄東(東大クラス特待・難関大)',
+      '佐久長聖(特待C含む)', '東京都市大学等々力(特選)',
+      '日本大学', '日本大学藤沢', '三田国際(ISC、MSTC)',
+      '八雲学園', '山手学院(特待含む)', '横浜創英', '早稲田佐賀'
     ]
   },
   2024: {
@@ -475,7 +484,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
 export default function AboutPage() {
   // 年度選択の状態管理
-  const [selectedYear, setSelectedYear] = useState<2025 | 2024 | 2023>(2025);
+  const [selectedYear, setSelectedYear] = useState<2026 | 2025 | 2024 | 2023>(2026);
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8">
@@ -868,6 +877,17 @@ export default function AboutPage() {
 
       {/* Section: 合格者の声 */}
       <section className="mb-20">
+        {/* 桜の画像 */}
+        <div className="mb-8 overflow-hidden rounded-xl shadow-lg">
+          <Image
+            src="/sakura-success.png"
+            alt="合格おめでとうございます"
+            width={1200}
+            height={400}
+            className="h-auto w-full object-cover"
+          />
+        </div>
+
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-bold text-navy-800 md:text-4xl">合格者の声</h2>
           <div className="mx-auto mt-3 h-1 w-32 bg-navy-600"></div>
@@ -934,7 +954,7 @@ export default function AboutPage() {
 
           {/* 年度選択ボタン */}
           <div className="mb-6 flex justify-center gap-3">
-            {([2025, 2024, 2023] as const).map((year) => (
+            {([2026, 2025, 2024, 2023] as const).map((year) => (
               <button
                 key={year}
                 onClick={() => setSelectedYear(year)}
