@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { MessageCircle } from 'lucide-react';
 
 interface CTASectionProps {
   variant?: 'default' | 'compact';
@@ -12,22 +11,26 @@ export function CTASection({ variant = 'default' }: CTASectionProps) {
         <p className="mb-4 text-sm text-navy-700">
           ご不明点や学習状況の整理は、無料でご相談いただけます。
         </p>
-        <div className="flex flex-col gap-2 sm:flex-row">
+        <div className="flex flex-col gap-3 sm:flex-row">
           <Link
-            href="/contact"
-            className="flex items-center justify-center gap-2 rounded-lg bg-orange-500 px-6 py-3 text-base font-bold text-navy-900 shadow-lg transition-all hover:bg-orange-600 hover:shadow-xl"
+            href="/counseling"
+            className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-green-500 to-green-600 py-3 px-6 text-base font-bold text-white shadow-lg transition-all hover:from-green-600 hover:to-green-700"
           >
-            学習カウンセリングに申し込む
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-xs font-bold text-green-600">
+              無料
+            </span>
+            学習相談に申し込む
           </Link>
-          <Link
-            href="https://lin.ee/P0lR1LD"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-lg bg-line px-6 py-3 text-base font-semibold text-white transition-all hover:bg-line-dark"
+          <a
+            href="tel:04570755151"
+            className="flex items-center justify-center gap-2 rounded-lg bg-white py-3 px-6 text-base font-bold text-red-600 shadow-lg transition-all hover:bg-gray-50"
+            style={{ border: '2px solid #e5e7eb' }}
           >
-            <MessageCircle className="h-4 w-4" />
-            LINEで申し込む
-          </Link>
+            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            045-7075-5151
+          </a>
         </div>
       </div>
     );
@@ -45,22 +48,26 @@ export function CTASection({ variant = 'default' }: CTASectionProps) {
         <br className="hidden sm:block" />
         着実に伸びる勉強サイクルを今すぐ実現しましょう。
       </p>
-      <div className="flex flex-col gap-2 sm:flex-row">
+      <div className="flex flex-col gap-3 sm:flex-row">
         <Link
-          href="/contact"
-          className="flex items-center justify-center gap-2 rounded-lg bg-orange-500 px-6 py-3 text-base font-bold text-navy-900 shadow-lg transition-all hover:bg-orange-600 hover:shadow-xl"
+          href="/counseling"
+          className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-green-500 to-green-600 py-3 px-6 text-base font-bold text-white shadow-lg transition-all hover:from-green-600 hover:to-green-700"
         >
-          学習カウンセリングに申し込む
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-xs font-bold text-green-600">
+            無料
+          </span>
+          学習相談に申し込む
         </Link>
-        <Link
-          href="https://lin.ee/P0lR1LD"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 rounded-lg bg-line px-6 py-3 text-base font-semibold text-white transition-all hover:bg-line-dark"
+        <a
+          href="tel:04570755151"
+          className="flex items-center justify-center gap-2 rounded-lg bg-white py-3 px-6 text-base font-bold text-red-600 shadow-lg transition-all hover:bg-gray-50"
+          style={{ border: '2px solid #e5e7eb' }}
         >
-          <MessageCircle className="h-4 w-4" />
-          LINEで申し込む
-        </Link>
+          <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg>
+          045-7075-5151
+        </a>
       </div>
     </section>
   );
