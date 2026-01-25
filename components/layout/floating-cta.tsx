@@ -10,7 +10,7 @@ export function FloatingCTA() {
         {/* 体験授業 */}
         <Link
           href="#"
-          className="flex flex-1 flex-col items-center justify-center gap-2 border-r border-navy-600 py-4 px-2 text-center transition-all hover:bg-navy-700"
+          className="flex flex-1 flex-col items-center justify-center gap-2 border-r border-white/20 py-4 px-2 text-center transition-all hover:bg-navy-700"
         >
           <GraduationCap className="h-6 w-6 text-white" />
           <span className="text-sm font-bold text-white">体験授業</span>
@@ -19,7 +19,7 @@ export function FloatingCTA() {
         {/* 学習カウンセリング */}
         <Link
           href="/counseling"
-          className="flex flex-1 flex-col items-center justify-center gap-2 border-r border-navy-600 py-4 px-2 text-center transition-all hover:bg-navy-700"
+          className="flex flex-1 flex-col items-center justify-center gap-2 border-r border-white/20 py-4 px-2 text-center transition-all hover:bg-navy-700"
         >
           <MessageCircle className="h-6 w-6 text-white" />
           <span className="text-sm font-bold text-white">

@@ -83,6 +83,44 @@ export default function PricingPage() {
       </section>
 
       <section className="mb-10">
+        <SectionHeader title="時間割" />
+        <div className="overflow-x-auto rounded-lg border border-navy-100 bg-white">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b border-navy-100 bg-navy-600">
+                <th className="px-3 py-2.5 text-left text-xs font-semibold text-white sm:px-4 sm:text-sm"></th>
+                <th className="px-3 py-2.5 text-center text-xs font-semibold text-white sm:px-4 sm:text-sm">平日（月～金）</th>
+                <th className="px-3 py-2.5 text-center text-xs font-semibold text-white sm:px-4 sm:text-sm">土</th>
+                <th className="px-3 py-2.5 text-center text-xs font-semibold text-white sm:px-4 sm:text-sm">日</th>
+                <th className="px-3 py-2.5 text-center text-xs font-semibold text-white sm:px-4 sm:text-sm">講習期間</th>
+              </tr>
+            </thead>
+            <tbody className="bg-slate-50">
+              {[
+                { time: '12:30-13:50', weekday: '×', sat: '×', sun: '○', lesson: '○' },
+                { time: '14:00-15:20', weekday: '×', sat: '○', sun: '○', lesson: '○' },
+                { time: '15:30-16:50', weekday: '×', sat: '○', sun: '○', lesson: '○' },
+                { time: '17:00-18:20', weekday: '○', sat: '○', sun: '○', lesson: '△' },
+                { time: '18:30-19:50', weekday: '○', sat: '○', sun: '○', lesson: '△' },
+                { time: '20:00-21:20', weekday: '○', sat: '○', sun: '×', lesson: '△' },
+              ].map((row, index) => (
+                <tr key={index} className={index !== 5 ? 'border-b border-navy-100' : ''}>
+                  <td className="bg-white px-3 py-2.5 text-xs font-medium text-navy-700 sm:px-4 sm:text-sm">{row.time}</td>
+                  <td className="px-3 py-2.5 text-center text-sm text-navy-600 sm:text-base">{row.weekday}</td>
+                  <td className="px-3 py-2.5 text-center text-sm text-navy-600 sm:text-base">{row.sat}</td>
+                  <td className="px-3 py-2.5 text-center text-sm text-navy-600 sm:text-base">{row.sun}</td>
+                  <td className="px-3 py-2.5 text-center text-sm text-navy-600 sm:text-base">{row.lesson}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 text-xs leading-relaxed text-navy-500">
+          ※○の時間帯でご受講可能です。ただし、学校が終わる時間等によっては、△、×の箇所でも対応できる可能性がございますので、ご相談ください。
+        </p>
+      </section>
+
+      <section className="mb-10">
         <SectionHeader title="よくある質問" />
         <Accordion type="single" collapsible className="rounded-lg border border-navy-100 bg-white">
           {faqs.map((faq, index) => (

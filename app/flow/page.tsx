@@ -70,7 +70,7 @@ export default function FlowPage() {
             {/* ヒーロー画像バナー */}
             <div className="relative h-40 w-full overflow-hidden md:h-56">
                 <Image
-                    src="/flow-hero.jpg"
+                    src="/kyousitsu_gazou.jpg"
                     alt="LEFY教室の様子"
                     fill
                     className="object-cover object-top"

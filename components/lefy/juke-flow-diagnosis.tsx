@@ -121,15 +121,26 @@ const flowData = {
 
 export function JukenFlowDiagnosis() {
     const [currentNodeId, setCurrentNodeId] = useState<string>('q1');
+    const [history, setHistory] = useState<string[]>([]); // Track navigation history
 
     const currentNode = flowData.nodes.find((node) => node.id === currentNodeId);
 
     const handleReset = () => {
         setCurrentNodeId('q1');
+        setHistory([]); // Clear history on reset
     };
 
     const handleOption = (nextId: string) => {
+        setHistory([...history, currentNodeId]); // Save current node to history
         setCurrentNodeId(nextId);
+    };
+
+    const handleBack = () => {
+        if (history.length > 0) {
+            const previousNodeId = history[history.length - 1];
+            setCurrentNodeId(previousNodeId);
+            setHistory(history.slice(0, -1)); // Remove last item from history
+        }
     };
 
     if (!currentNode) {
@@ -177,6 +188,19 @@ export function JukenFlowDiagnosis() {
                                         </button>
                                     ))}
                                 </div>
+
+                                {/* Back button */}
+                                {history.length > 0 && (
+                                    <button
+                                        onClick={handleBack}
+                                        className="mt-4 flex items-center gap-2 text-sm font-medium text-navy-600 transition-colors hover:text-navy-800"
+                                    >
+                                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                        前の質問に戻る
+                                    </button>
+                                )}
                             </div>
                             <div className="rounded-lg border-2 border-yellow-200 bg-white p-4 text-center">
                                 <p className="text-sm text-navy-700">
